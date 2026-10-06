@@ -1,75 +1,179 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+🎓 E-Learning Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack e-learning platform built with React.js, Node.js, Express.js, and MongoDB. The platform allows users to browse courses, explore chapters, purchase courses, and manage their learning, while administrators can manage users, courses, categories, authors, and chapters.
 
-## Available Scripts
+🌐 Live Demo
 
-In the project directory, you can run:
+https://e-learning-platform-1-gck5.onrender.com/
 
-### `npm start`
+✨ Features
+👤 User Features
+User registration and login
+Browse available courses
+Search and filter courses
+View course details
+Explore course chapters
+Purchase courses
+Access purchased learning content
+User profile management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+👨‍💼 Admin Features
+Admin authentication
+Dashboard
+User management
+Course management
+Category management
+Author management
+Chapter management
+Course content management
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🔐 Security
+Environment-based configuration
+Protected API routes
+Role-based access control
+Secure database connection
+CORS configuration
 
-### `npm test`
+🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Frontend
+React.js
+JavaScript
+HTML5
+CSS3
+Bootstrap
 
-### `npm run build`
+Backend
+Node.js
+Express.js
+REST API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Database
+MongoDB
+Mongoose
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Deployment
+Frontend: Render
+Backend: Render
+Database: MongoDB Atlas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📂 Project Structure
+e-learning-platform/
+│
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── server.js
+│   └── package.json
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── assets/
+│   ├── App.js
+│   └── index.js
+│
+├── .gitignore
+├── package.json
+└── README.md
 
-### `npm run eject`
+🚀 Getting Started
+1. Clone the repository
+git clone https://github.com/rajgorpunam16/e-learning-platform.git
+cd e-learning-platform
+2. Install frontend dependencies
+npm install
+3. Install backend dependencies
+cd backend
+npm install
+4. Configure environment variables
+Create:
+backend/.env
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Example:
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+FRONTEND_URL=http://localhost:3000
+JWT_SECRET=your_secret_key
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Do not commit .env files to GitHub.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Start the backend
+cd backend
+npm start
+6. Start the frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open another terminal:
 
-## Learn More
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application will be available at:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+http://localhost:3000
+🔌 API
 
-### Code Splitting
+Example endpoints:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+GET    /api/courses
+GET    /api/courses/:id
 
-### Analyzing the Bundle Size
+POST   /api/users/register
+POST   /api/users/login
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+GET    /api/categories
+GET    /api/authors
 
-### Making a Progressive Web App
+GET    /api/chapters
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Admin endpoints are protected using authentication and authorization.
 
-### Advanced Configuration
+🗄️ Database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The application uses MongoDB to store:
 
-### Deployment
+Users
+Courses
+Authors
+Categories
+Chapters
+Books/content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+MongoDB Atlas can be used for cloud deployment.
 
-### `npm run build` fails to minify
+🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# e-learning-platform
-A React-based e-learning platform for browsing courses, learning chapters, managing purchases, and administering course content.
->>>>>>> 8d0b77d73b227d182d4de08de71e51291363ea20
+The project can be deployed using:
+
+React frontend → Render
+Node.js/Express backend → Render
+MongoDB → MongoDB Atlas
+
+Environment variables must be configured separately on the deployment platform.
+
+🔮 Future Enhancements
+Online payment integration
+Course progress tracking
+Video-based learning
+Course ratings and reviews
+Certificates
+Wishlist
+Notifications
+Advanced admin analytics
+Instructor dashboard
+Course completion tracking
+
+👩‍💻 Author
+
+Punam Rajgor
+
+GitHub: https://github.com/rajgorpunam16
+
+📄 License
+
+This project is created for educational and portfolio purposes.
