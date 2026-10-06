@@ -4,7 +4,7 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-
+import API_BASE_URL from "../config";
 import {
   FaArrowLeft,
   FaArrowRight,
@@ -86,7 +86,7 @@ function Payment({
         return course.image;
       }
 
-      return `http://localhost:5000/${course.image}`;
+      return `${API_BASE_URL}/${course.image}`;
     }
 
     return "";

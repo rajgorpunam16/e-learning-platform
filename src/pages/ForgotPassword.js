@@ -5,7 +5,7 @@ import {
   FaEnvelope,
   FaPaperPlane,
 } from "react-icons/fa";
-
+import API_BASE_URL from "../config";
 import "../css/ForgotPassword.css";
 
 function ForgotPassword() {
@@ -39,7 +39,7 @@ function ForgotPassword() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/forgot-password",
+       `${API_BASE_URL}/forgot-password`,
         {
           method: "POST",
           headers: {

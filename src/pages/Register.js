@@ -3,7 +3,7 @@ import {
   Link,
   useNavigate,
 } from "react-router-dom";
-
+import API_BASE_URL from "../config";
 import "../css/Re.css";
 
 function Register({
@@ -113,7 +113,7 @@ function Register({
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        `${API_BASE_URL}/api/auth/register`,
         {
           method: "POST",
 

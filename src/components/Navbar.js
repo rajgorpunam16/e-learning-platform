@@ -4,6 +4,7 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
+ import API_BASE_URL from "../config";
 
 import {
   FaBars,
@@ -50,8 +51,8 @@ function Navbar({
      API
   ===================================================== */
 
-  const API_URL = "http://localhost:5000/api/courses";
 
+const API_URL= `${API_BASE_URL}/api/courses`;
   /* =====================================================
      FETCH COURSES
   ===================================================== */
@@ -168,11 +169,7 @@ function Navbar({
      POPULAR PROGRAMS
   ===================================================== */
 
-  /*
-    Show the first 6 courses coming from:
 
-    http://localhost:5000/api/courses
-  */
 
   const displayedCourses = courses
     .filter((course) => getCourseId(course))

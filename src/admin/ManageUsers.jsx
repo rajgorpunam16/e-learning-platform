@@ -7,8 +7,9 @@ import {
 } from "react-icons/fa";
 import "../admin/ManageUsers.css";
 
-const API_URL = "http://localhost:5000/api/admin/users";
+import API_BASE_URL from "../config";
 
+const API_URL = `${API_BASE_URL}/api/admin/users`;
 function ManageUsers() {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
@@ -21,7 +22,7 @@ function ManageUsers() {
 
   const loadUsers = async () => {
     try {
-      const response = await fetch(API_URL);
+      const response = await fetch(API_BASE_URL);
       const data = await response.json();
 
       if (!response.ok) throw new Error(data.message || "Unable to load users.");
@@ -36,7 +37,7 @@ function ManageUsers() {
     if (!window.confirm("Delete this user account?")) return;
 
     try {
-      const response = await fetch(`${API_URL}/${userId}`, {
+      const response = await fetch(`${API_BASE_URL}/${userId}`, {
         method: "DELETE",
       });
       const data = await response.json();

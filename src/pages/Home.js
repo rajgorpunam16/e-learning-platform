@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import API_BASE_URL from "../config";
 import {
   FaArrowLeft,
   FaArrowRight,
@@ -25,7 +25,7 @@ import {
 
 import "../css/Home.css";
 
-const API_URL = "http://localhost:5000/api/courses";
+
 
 function Home({
   cart = [],
@@ -68,7 +68,7 @@ function Home({
       setLoadingCourses(true);
       setCourseError("");
 
-      const response = await fetch(API_URL);
+      const response = await fetch(API_BASE_URL);
       const data = await response.json();
 
       if (!response.ok) {

@@ -21,8 +21,9 @@ import {
 
 import "../css/Courses.css";
 
-const API_URL = "http://localhost:5000/api/courses";
+import API_BASE_URL from "../config";
 
+const API_URL= `${API_BASE_URL}/api/courses`;
 function Courses({
   
   cart = [],

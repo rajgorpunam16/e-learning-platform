@@ -7,9 +7,9 @@ import {
   FaUserGraduate,
 } from "react-icons/fa";
 import "../admin/Dashboard.css";
+import API_BASE_URL from "../config";
 
-const API_BASE = "http://localhost:5000/api/admin";
-
+const API_BASE = `${API_BASE_URL}/api/admin`;
 function Dashboard() {
   const [stats, setStats] = useState({
     courses: 0,

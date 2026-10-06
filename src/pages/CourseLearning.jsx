@@ -26,12 +26,13 @@ import {
 } from "react-icons/fa";
 
 import "../css/CourseLearning.css";
+import API_BASE_URL from "../config";
 
 const COURSE_API =
-  "http://localhost:5000/api/courses";
+ `${API_BASE_URL}/api/coursess`;
 
 const CHAPTER_API =
-  "http://localhost:5000/api/admin/chapters";
+  `${API_BASE_URL}/api/admin/chapters`;
 
 function CourseLearning({
   purchasedCourses = [],

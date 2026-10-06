@@ -11,10 +11,9 @@ import {
 } from "react-icons/fa";
 
 import "./ManageCategories.css";
+import API_BASE_URL from "../config";
 
-const API_URL =
-  "http://localhost:5000/api/admin/categories";
-
+const API_URL = `${API_BASE_URL}/api/admin/categories`;
 const emptyForm = {
   name: "",
   description: "",
@@ -47,7 +46,7 @@ function ManageCategories() {
       setLoading(true);
       setError("");
 
-      const response = await fetch(API_URL);
+      const response = await fetch(API_BASE_URL);
       const data = await response.json();
 
       if (!response.ok) {
@@ -164,8 +163,8 @@ function ManageCategories() {
         selectedCategory?.id;
 
       const requestUrl = isEditing
-        ? `${API_URL}/${categoryId}`
-        : API_URL;
+        ? `${API_BASE_URL}/${categoryId}`
+        : API_BASE_URL;
 
       const response = await fetch(
         requestUrl,
@@ -238,7 +237,7 @@ function ManageCategories() {
       setMessage("");
 
       const response = await fetch(
-        `${API_URL}/${categoryId}`,
+        `${API_BASE_URL}/${categoryId}`,
         {
           method: "DELETE",
         }

@@ -17,7 +17,7 @@ import {
   FaTasks,
   FaUserGraduate,
 } from "react-icons/fa";
-
+import API_BASE_URL from "../config";
 import "../css/StudentDashboard.css";
 
 function StudentDashboard({
@@ -81,7 +81,7 @@ function StudentDashboard({
         return course.image;
       }
 
-      return `http://localhost:5000/${course.image}`;
+      return `${API_BASE_URL}/${course.image}`;
     }
 
     return "";

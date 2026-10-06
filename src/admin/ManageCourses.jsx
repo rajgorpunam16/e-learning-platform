@@ -12,8 +12,9 @@ import {
 
 import "./ManageCourses.css";
 
-const API_URL = "http://localhost:5000/api/admin/courses";
+import API_BASE_URL from "../config";
 
+const API_URL = `${API_BASE_URL}/api/admin/courses`;
 const emptyForm = {
   title: "",
   shortTitle: "",
@@ -59,7 +60,7 @@ function ManageCourses() {
       setLoading(true);
       setError("");
 
-      const response = await fetch(API_URL);
+      const response = await fetch(API_BASE_URL);
 
       const data = await response.json();
 
@@ -197,8 +198,8 @@ function ManageCourses() {
       const isEdit = modal === "edit";
 
       const url = isEdit
-        ? `${API_URL}/${selectedCourse._id}`
-        : API_URL;
+        ? `${API_BASE_URL}/${selectedCourse._id}`
+        : API_BASE_URL;
 
       const response = await fetch(url, {
         method: isEdit ? "PUT" : "POST",
@@ -251,7 +252,7 @@ function ManageCourses() {
       setMessage("");
 
       const response = await fetch(
-        `${API_URL}/${course._id}`,
+        `${API_BASE_URL}/${course._id}`,
         {
           method: "DELETE",
         }

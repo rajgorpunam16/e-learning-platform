@@ -4,7 +4,7 @@ import {
   useNavigate,
   useParams,
 } from "react-router-dom";
-
+import API_BASE_URL from "../config";
 import {
   FaArrowLeft,
   FaCheckCircle,
@@ -95,7 +95,7 @@ function ResetPassword() {
       setLoading(true);
 
       const response = await fetch(
-        `http://localhost:5000/reset-password/${token}`,
+       `${API_BASE_URL}/reset-password/${token}`,
         {
           method: "POST",
           headers: {

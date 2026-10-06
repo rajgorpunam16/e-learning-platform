@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-
+import API_BASE_URL from "../config";
 import {
   FaArrowRight,
   FaBookOpen,
@@ -61,7 +61,7 @@ function PurchaseHistory({
         return course.image;
       }
 
-      return `http://localhost:5000/${course.image}`;
+      return `${API_BASE_URL}/${course.image}`;
     }
 
     return "";

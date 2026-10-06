@@ -23,8 +23,9 @@ import {
 
 import "../css/CourseDetails.css";
 
-const API_URL = "http://localhost:5000/api/courses";
+import API_BASE_URL from "../config";
 
+const API_URL= `${API_BASE_URL}/api/courses`;
 function CourseDetails({
   cart = [],
   setCart,
@@ -75,7 +76,7 @@ function CourseDetails({
       setLoading(true);
       setError("");
 
-      const response = await fetch(`${API_URL}/${id}`);
+      const response = await fetch(`${API_BASE_URL}/${id}`);
       const data = await response.json();
 
       if (!response.ok) {

@@ -11,14 +11,14 @@ import {
   FaTimes,
   FaTrash,
 } from "react-icons/fa";
-
+import API_BASE_URL from "../config";
 import "./ManageChapters.css";
 
 const CHAPTER_API =
-  "http://localhost:5000/api/admin/chapters";
+  `${API_BASE_URL}/api/admin/chapters`;
 
 const COURSE_API =
-  "http://localhost:5000/api/admin/courses";
+  `${API_BASE_URL}/api/admin/courses`;
 
 const emptyForm = {
   course: "",
