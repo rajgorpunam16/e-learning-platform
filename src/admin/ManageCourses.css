@@ -1,0 +1,513 @@
+.manage-courses {
+  width: 100%;
+}
+
+.manage-page-header {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.manage-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #f58220;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.manage-page-header h1 {
+  margin: 0;
+  color: #171719;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.manage-page-header p {
+  margin-top: 7px;
+  color: #707070;
+  font-size: 14px;
+}
+
+.admin-add-button,
+.admin-save-button {
+  padding: 13px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 8px;
+  background: #f58220;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-add-button:hover,
+.admin-save-button:hover {
+  background: #dc6d0d;
+}
+
+.admin-success-message,
+.admin-error-message {
+  margin-bottom: 18px;
+  padding: 13px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-success-message {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.admin-error-message {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.course-admin-toolbar {
+  margin-bottom: 20px;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.admin-search-box {
+  width: min(430px, 100%);
+  position: relative;
+}
+
+.admin-search-box svg {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.admin-search-box input {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px 0 43px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  outline: none;
+}
+
+.admin-search-box input:focus {
+  border-color: #f58220;
+  box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.12);
+}
+
+.course-admin-toolbar > span {
+  color: #777;
+  font-size: 13px;
+}
+
+.admin-course-table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 11px;
+}
+
+.admin-course-table {
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: collapse;
+}
+
+.admin-course-table th {
+  padding: 15px 17px;
+  color: #666;
+  background: #fafafa;
+  font-size: 11px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.admin-course-table td {
+  padding: 17px;
+  border-top: 1px solid #eee;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.admin-course-cell {
+  min-width: 270px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.admin-course-image {
+  width: 72px;
+  height: 52px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #fff5ec;
+  color: #f58220;
+}
+
+.admin-course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-course-cell > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.admin-course-cell strong {
+  max-width: 230px;
+  color: #171719;
+  font-size: 13px;
+}
+
+.admin-course-cell span {
+  color: #999;
+  font-size: 11px;
+}
+
+.course-level-chip {
+  padding: 5px 9px;
+  border-radius: 20px;
+  color: #b45309;
+  background: #fff7ed;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.course-status {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.course-status.active {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.course-status.inactive {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.admin-action-buttons {
+  display: flex;
+  gap: 7px;
+}
+
+.admin-action-buttons button {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-action {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.edit-action {
+  color: #d97706;
+  background: #fffbeb;
+}
+
+.delete-action {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.admin-loading,
+.admin-empty-state {
+  padding: 70px 20px;
+  color: #777;
+  text-align: center;
+}
+
+.admin-empty-state svg {
+  margin-bottom: 15px;
+  color: #f58220;
+  font-size: 35px;
+}
+
+.admin-modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 15, 17, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.admin-course-modal {
+  width: min(850px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.admin-modal-header {
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  padding: 22px 27px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-modal-header span {
+  color: #f58220;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.admin-modal-header h2 {
+  margin: 4px 0 0;
+  font-size: 23px;
+}
+
+.admin-modal-header button,
+.admin-view-close {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #f3f4f6;
+  cursor: pointer;
+}
+
+.admin-course-form {
+  padding: 27px;
+}
+
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.admin-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.admin-form-group.full {
+  grid-column: 1 / -1;
+}
+
+.admin-form-group label {
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-form-group input,
+.admin-form-group select,
+.admin-form-group textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  outline: none;
+  font: inherit;
+  font-size: 13px;
+}
+
+.admin-form-group textarea {
+  min-height: 95px;
+  resize: vertical;
+}
+
+.admin-form-group input:focus,
+.admin-form-group select:focus,
+.admin-form-group textarea:focus {
+  border-color: #f58220;
+  box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.1);
+}
+
+.admin-checkbox-row {
+  margin-top: 23px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.admin-checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-checkbox-row input {
+  accent-color: #f58220;
+}
+
+.admin-modal-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 11px;
+}
+
+.admin-cancel-button {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: #fff;
+  color: #444;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-view-modal {
+  position: relative;
+  width: min(650px, 100%);
+  max-height: 90vh;
+  padding: 30px;
+  overflow-y: auto;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.admin-view-close {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  right: 18px;
+}
+
+.admin-view-image {
+  width: 100%;
+  height: 260px;
+  margin-bottom: 23px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #fff5ec;
+  color: #f58220;
+  font-size: 50px;
+}
+
+.admin-view-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-view-level {
+  color: #f58220;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.admin-view-modal h2 {
+  margin: 8px 0 13px;
+  color: #171719;
+  font-size: 27px;
+}
+
+.admin-view-description {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.admin-view-stats {
+  margin: 24px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.admin-view-stats div {
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+}
+
+.admin-view-stats span {
+  color: #888;
+  font-size: 10px;
+}
+
+.admin-view-stats strong {
+  color: #222;
+  font-size: 13px;
+}
+
+.admin-view-price {
+  margin-bottom: 20px;
+  color: #171719;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+@media (max-width: 700px) {
+  .manage-page-header,
+  .course-admin-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-form-group.full {
+    grid-column: auto;
+  }
+
+  .admin-view-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-modal-overlay {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,440 @@
+/* =========================================================
+   DVOC LOGIN PAGE
+========================================================= */
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  background: #f5f7fa;
+  color: #17233d;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================================
+   LEFT SECTION
+========================================================= */
+
+.login-page .auth-left {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 9%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(245, 130, 32, 0.32),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(245, 130, 32, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #0d1729 0%,
+      #17233d 50%,
+      #263a5c 100%
+    );
+}
+
+.login-page .auth-left::before {
+  content: "";
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  right: -190px;
+  bottom: -180px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.login-page .auth-left::after {
+  content: "";
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: -100px;
+  bottom: -90px;
+
+  border: 1px solid rgba(245, 130, 32, 0.32);
+  border-radius: 50%;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.login-page .auth-logo {
+  width: 175px;
+  max-height: 90px;
+
+  margin-bottom: 45px;
+
+  position: relative;
+  z-index: 2;
+
+  object-fit: contain;
+  object-position: left center;
+
+  filter: drop-shadow(
+    0 8px 20px rgba(0, 0, 0, 0.15)
+  );
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.login-page .auth-left h1 {
+  position: relative;
+  z-index: 2;
+
+  max-width: 600px;
+
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+}
+
+.login-page .auth-left h1::after {
+  content: "";
+
+  width: 75px;
+  height: 5px;
+
+  display: block;
+
+  margin-top: 24px;
+
+  border-radius: 50px;
+
+  background: #f58220;
+}
+
+.login-page .auth-left > p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 530px;
+
+  margin: 0;
+
+  color: #c7d0dc;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   RIGHT SECTION
+========================================================= */
+
+.login-page .auth-right {
+  min-height: 100vh;
+
+  padding: 50px 7%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(245, 130, 32, 0.08),
+      transparent 25%
+    ),
+    #f5f7fa;
+}
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.login-page .auth-card {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 45px;
+
+  border: 1px solid #e4e7ec;
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 25px 60px rgba(23, 35, 61, 0.1);
+}
+
+.login-page .auth-card h2 {
+  margin: 0 0 8px;
+
+  color: #17233d;
+
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.login-page .auth-card > p:not(.auth-switch) {
+  margin: 0 0 32px;
+
+  color: #667085;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.login-page .form-group {
+  margin-bottom: 21px;
+}
+
+.login-page .form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.login-page .auth-card input {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 17px;
+
+  border: 1px solid #d8dde6;
+  border-radius: 9px;
+
+  outline: none;
+
+  color: #17233d;
+  background: #ffffff;
+
+  font: inherit;
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.login-page .auth-card input::placeholder {
+  color: #98a2b3;
+}
+
+.login-page .auth-card input:hover {
+  border-color: #b8c0cc;
+}
+
+.login-page .auth-card input:focus {
+  border-color: #f58220;
+
+  background: #fffdfb;
+
+  box-shadow:
+    0 0 0 4px rgba(245, 130, 32, 0.12);
+}
+
+/* =========================================================
+   FORGOT PASSWORD
+========================================================= */
+
+.login-page .login-options {
+  margin: -2px 0 23px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-page .login-options a {
+  color: #f58220;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.login-page .login-options a:hover {
+  color: #d9680d;
+  text-decoration: underline;
+}
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-page .btn-primary {
+  width: 100%;
+  min-height: 52px;
+
+  padding: 13px 20px;
+
+  border: none;
+  border-radius: 9px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+  background: #f58220;
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(245, 130, 32, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.login-page .btn-primary:hover {
+  transform: translateY(-2px);
+
+  background: #e97413;
+
+  box-shadow:
+    0 15px 30px rgba(245, 130, 32, 0.3);
+}
+
+.login-page .btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.login-page .error-msg {
+  margin-bottom: 20px;
+  padding: 13px 15px;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  color: #b42318;
+  background: #fef3f2;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   REGISTER LINK
+========================================================= */
+
+.login-page .auth-switch {
+  margin: 26px 0 0;
+
+  color: #667085;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+.login-page .auth-switch a {
+  color: #f58220;
+
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.login-page .auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-page .auth-left {
+    min-height: auto;
+    padding: 55px 7%;
+  }
+
+  .login-page .auth-left h1 {
+    font-size: 45px;
+  }
+
+  .login-page .auth-right {
+    min-height: auto;
+    padding: 55px 6%;
+  }
+}
+
+@media (max-width: 550px) {
+  .login-page .auth-left {
+    padding: 45px 25px;
+  }
+
+  .login-page .auth-logo {
+    width: 140px;
+    margin-bottom: 30px;
+  }
+
+  .login-page .auth-left h1 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+  }
+
+  .login-page .auth-left > p {
+    font-size: 14px;
+  }
+
+  .login-page .auth-right {
+    padding: 35px 18px;
+  }
+
+  .login-page .auth-card {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .login-page .auth-card h2 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,290 @@
+/* ===================================
+   RESPONSIVE CSS
+=================================== */
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width: 992px) {
+  .navbar {
+    height: auto;
+    padding: 16px 5%;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .navbar-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-actions {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 70px 5%;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btns,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    flex: unset;
+    width: 100%;
+    max-width: 460px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar,
+  .admin-sidebar.collapsed {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .admin-menu {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .admin-content {
+    padding: 18px;
+  }
+
+  .books-grid,
+  .categories-grid,
+  .chapters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-title,
+  .section-head h2,
+  .page-header h1 {
+    font-size: 34px;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links {
+    width: 100%;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+
+  .hero-books-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .add-cart-btn {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .table-top,
+  .books-header,
+  .categories-header,
+  .chapters-header,
+  .users-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .admin-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card,
+  .stat-card {
+    padding: 18px;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 700px;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .container {
+    width: 94%;
+  }
+
+  .navbar-links {
+    gap: 10px;
+  }
+
+  .navbar-links a {
+    font-size: 13px;
+  }
+
+  .hero h1 {
+    font-size: 31px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+  }
+
+  .section-head h2 {
+    font-size: 30px;
+  }
+
+  .book-cover {
+    height: 210px;
+  }
+
+  .book-info {
+    padding: 16px;
+  }
+
+  .footer {
+    padding: 45px 5% 0;
+  }
+
+  .admin-page-body {
+    padding: 18px;
+  }
+
+  .save-btn,
+  .cancel-btn,
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+  }
+
+  .form-actions,
+  .action-buttons {
+    flex-direction: column;
+  }
+}

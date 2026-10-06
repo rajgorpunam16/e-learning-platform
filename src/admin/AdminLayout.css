@@ -1,0 +1,166 @@
+.admin-shell {
+  min-height: 100vh;
+  display: flex;
+  background: #f6f7f9;
+  color: #111827;
+}
+
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  background: #171719;
+  color: #fff;
+  z-index: 100;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 8px 28px;
+  border-bottom: 1px solid #303033;
+}
+
+.admin-brand img {
+  width: 58px;
+  height: 58px;
+  padding: 5px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.admin-brand div {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-brand strong {
+  font-size: 20px;
+}
+
+.admin-brand span {
+  color: #999;
+  font-size: 12px;
+}
+
+.admin-navigation {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-navigation a,
+.admin-home-link {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-radius: 9px;
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.admin-navigation a:hover,
+.admin-navigation a.active {
+  color: #fff;
+  background: #f58220;
+}
+
+.admin-home-link {
+  margin-top: auto;
+  border: 1px solid #333;
+}
+
+.admin-home-link:hover {
+  color: #f58220;
+  border-color: #f58220;
+}
+
+.admin-main {
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  margin-left: 260px;
+}
+
+.admin-header {
+  height: 78px;
+  padding: 0 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-header-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f58220;
+  font-weight: 700;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.admin-avatar {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f58220;
+  color: #fff;
+  font-weight: 700;
+}
+
+.admin-profile div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-profile strong {
+  font-size: 13px;
+}
+
+.admin-profile span {
+  color: #777;
+  font-size: 11px;
+}
+
+.admin-content {
+  padding: 32px;
+}
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    width: 80px;
+    padding: 25px 12px;
+  }
+
+  .admin-brand div,
+  .admin-navigation a:not(.active) {
+  }
+
+  .admin-brand div,
+  .admin-navigation a span {
+    display: none;
+  }
+
+  .admin-main {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+  }
+}

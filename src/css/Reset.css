@@ -1,0 +1,576 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap");
+
+:root {
+  --reset-orange: #f58220;
+  --reset-orange-dark: #e66d00;
+  --reset-orange-soft: #fff3e7;
+
+  --reset-navy: #17233d;
+  --reset-text: #475467;
+  --reset-muted: #667085;
+
+  --reset-white: #ffffff;
+  --reset-light: #f8fafc;
+  --reset-border: #e4e7ec;
+  --reset-input-border: #d0d5dd;
+
+  --reset-success: #16875f;
+  --reset-success-soft: #ecfdf3;
+  --reset-success-border: #abefc6;
+
+  --reset-danger: #b42318;
+  --reset-danger-soft: #fef3f2;
+  --reset-danger-border: #fecdca;
+}
+
+/* =========================================
+   PAGE
+========================================= */
+
+.reset-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 88% 10%,
+      rgba(245, 130, 32, 0.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 8% 90%,
+      rgba(23, 35, 61, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8fafc 58%,
+      #eef4fb 100%
+    );
+
+  font-family: "Inter", sans-serif;
+}
+
+.reset-page *,
+.reset-page *::before,
+.reset-page *::after {
+  box-sizing: border-box;
+}
+
+.reset-page::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  right: -130px;
+
+  width: 430px;
+  height: 430px;
+
+  border: 1px solid rgba(245, 130, 32, 0.2);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.reset-page::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  left: -120px;
+
+  width: 320px;
+  height: 320px;
+
+  border: 1px solid rgba(23, 35, 61, 0.1);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.reset-card {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 520px;
+  padding: 42px 40px 38px;
+
+  border: 1px solid rgba(228, 231, 236, 0.96);
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  box-shadow:
+    0 28px 70px rgba(16, 24, 40, 0.12),
+    0 6px 18px rgba(16, 24, 40, 0.04);
+
+  text-align: center;
+}
+
+/* =========================================
+   LOGO AND HEADING
+========================================= */
+
+.reset-logo {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px;
+  padding: 8px;
+
+  display: block;
+
+  object-fit: contain;
+
+  border: 1px solid #eef0f2;
+  border-radius: 18px;
+
+  background: var(--reset-white);
+
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.08);
+}
+
+.reset-label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: var(--reset-orange-dark);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.reset-card h1 {
+  margin: 0 0 12px;
+
+  color: var(--reset-navy);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.9px;
+}
+
+.reset-subtitle {
+  max-width: 400px;
+  margin: 0 auto 26px;
+
+  color: var(--reset-muted);
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.reset-error-message,
+.reset-success-message {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 13px 14px;
+
+  border-radius: 10px;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.reset-error-message {
+  border: 1px solid var(--reset-danger-border);
+
+  color: var(--reset-danger);
+  background: var(--reset-danger-soft);
+}
+
+.reset-success-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  border: 1px solid var(--reset-success-border);
+
+  color: var(--reset-success);
+  background: var(--reset-success-soft);
+}
+
+.reset-success-message svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.reset-card form {
+  width: 100%;
+  text-align: left;
+}
+
+.reset-form-group {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.reset-form-group label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reset-password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.reset-password-icon {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 16px;
+
+  transform: translateY(-50%);
+
+  color: var(--reset-orange);
+
+  font-size: 14px;
+
+  pointer-events: none;
+}
+
+.reset-password-wrapper input {
+  width: 100%;
+  height: 54px;
+  padding: 0 48px;
+
+  outline: none;
+
+  border: 1px solid var(--reset-input-border);
+  border-radius: 12px;
+
+  color: #101828;
+  background: var(--reset-white);
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.reset-password-wrapper input::placeholder {
+  color: #98a2b3;
+}
+
+.reset-password-wrapper input:hover:not(:disabled) {
+  border-color: #b8bec8;
+}
+
+.reset-password-wrapper input:focus {
+  border-color: var(--reset-orange);
+
+  background: #fffdfa;
+
+  box-shadow:
+    0 0 0 4px rgba(245, 130, 32, 0.12);
+}
+
+.reset-password-wrapper input:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+  background: #f2f4f7;
+}
+
+/* =========================================
+   EYE BUTTON
+========================================= */
+
+.reset-eye-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  transform: translateY(-50%);
+
+  border: none;
+  border-radius: 9px;
+
+  color: var(--reset-muted);
+  background: transparent;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.reset-eye-button:hover {
+  color: var(--reset-orange);
+  background: var(--reset-orange-soft);
+}
+
+/* =========================================
+   PASSWORD RULES
+========================================= */
+
+.reset-password-rules {
+  margin: 2px 0 22px;
+  padding: 16px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+
+  border: 1px solid var(--reset-border);
+  border-radius: 12px;
+
+  background: var(--reset-light);
+}
+
+.reset-password-rules > p {
+  grid-column: 1 / -1;
+  margin: 0 0 2px;
+
+  color: var(--reset-navy);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.reset-rule {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #98a2b3;
+
+  font-size: 10px;
+  line-height: 1.4;
+
+  transition: color 0.2s ease;
+}
+
+.reset-rule svg {
+  flex: 0 0 auto;
+
+  color: #d0d5dd;
+
+  font-size: 12px;
+
+  transition: color 0.2s ease;
+}
+
+.reset-rule.valid {
+  color: var(--reset-success);
+}
+
+.reset-rule.valid svg {
+  color: var(--reset-success);
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.reset-submit-button {
+  width: 100%;
+  min-height: 54px;
+  padding: 13px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border: none;
+  border-radius: 12px;
+
+  color: var(--reset-white);
+  background:
+    linear-gradient(
+      135deg,
+      var(--reset-orange),
+      #ff8d29
+    );
+
+  box-shadow:
+    0 12px 25px rgba(245, 130, 32, 0.25);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.reset-submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 17px 31px rgba(245, 130, 32, 0.33);
+}
+
+.reset-submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.reset-submit-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* =========================================
+   LOADER
+========================================= */
+
+.reset-button-loader {
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: var(--reset-white);
+  border-radius: 50%;
+
+  animation: resetPasswordSpin 0.7s linear infinite;
+}
+
+@keyframes resetPasswordSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.reset-back-login {
+  width: fit-content;
+  margin: 25px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: var(--reset-orange);
+
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.reset-back-login:hover {
+  color: var(--reset-orange-dark);
+
+  transform: translateX(-3px);
+}
+
+.reset-back-login svg {
+  font-size: 11px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .reset-page {
+    padding: 20px;
+  }
+
+  .reset-card {
+    padding: 34px 23px 30px;
+
+    border-radius: 20px;
+  }
+
+  .reset-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 18px;
+  }
+
+  .reset-card h1 {
+    font-size: 27px;
+  }
+
+  .reset-subtitle {
+    margin-bottom: 24px;
+
+    font-size: 12px;
+  }
+
+  .reset-password-rules {
+    grid-template-columns: 1fr;
+  }
+
+  .reset-password-rules > p {
+    grid-column: auto;
+  }
+
+  .reset-password-wrapper input,
+  .reset-submit-button {
+    min-height: 51px;
+  }
+}
+
+@media (max-width: 380px) {
+  .reset-page {
+    padding: 14px;
+  }
+
+  .reset-card {
+    padding: 28px 17px;
+  }
+
+  .reset-card h1 {
+    font-size: 24px;
+  }
+
+  .reset-label {
+    font-size: 9px;
+  }
+}

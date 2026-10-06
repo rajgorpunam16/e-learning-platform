@@ -1,0 +1,417 @@
+/* ===================================
+   GOOGLE FONTS
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===================================
+   VARIABLES
+=================================== */
+
+:root {
+
+    --primary: #6B4226;
+    --primary-dark: #4A2C1A;
+    --primary-light: #8B5A3C;
+
+    --cream: #FFF8F0;
+    --cream-dark: #F6EFE6;
+    --white: #ffffff;
+
+    --gold: #C9A227;
+    --gold-light: #E7C86B;
+
+    --green: #2E7D32;
+    --red: #D32F2F;
+
+    --text: #2B1D16;
+    --text-light: #6D625B;
+
+    --border: #E5D6C8;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, .08);
+    --shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 15px 35px rgba(0, 0, 0, .12);
+
+    --radius-sm: 8px;
+    --radius: 14px;
+    --radius-lg: 20px;
+
+    --transition: .3s ease;
+
+}
+
+/* ===================================
+   RESET
+=================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+button {
+
+    cursor: pointer;
+
+    border: none;
+
+    outline: none;
+
+    font-family: inherit;
+
+}
+
+input,
+textarea,
+select {
+
+    outline: none;
+
+    font-family: inherit;
+
+}
+
+.container {
+
+    width: 92%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+}
+
+.section {
+
+    padding: 70px 0;
+
+}
+
+.section-title {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 40px;
+
+    color: var(--primary);
+
+    margin-bottom: 12px;
+
+}
+
+.section-subtitle {
+
+    color: var(--text-light);
+
+    font-size: 15px;
+
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.btn {
+
+    padding: 13px 24px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+.btn-primary:hover {
+
+    background: var(--primary-dark);
+
+}
+
+.btn-secondary {
+
+    background: var(--gold);
+
+    color: white;
+
+}
+
+.btn-secondary:hover {
+
+    background: #b38d17;
+
+}
+
+.btn-outline {
+
+    background: white;
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+/* ===================================
+   INPUTS
+=================================== */
+
+.form-control {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    transition: .3s;
+}
+
+.form-control:focus {
+
+    border-color: var(--gold);
+
+}
+
+/* ===================================
+   CARD
+=================================== */
+
+.card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+}
+
+/* ===================================
+   BADGE
+=================================== */
+
+.badge {
+
+    background: var(--gold);
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--cream-dark);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--gold);
+
+}
+
+/* ===================================
+   LOADER
+=================================== */
+
+.loader {
+
+    width: 50px;
+
+    height: 50px;
+
+    border: 5px solid #ddd;
+
+    border-top: 5px solid var(--primary);
+
+    border-radius: 50%;
+
+    animation: spin .8s linear infinite;
+
+}
+
+@keyframes spin {
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+/* ===================================
+   COMMON TABLE
+=================================== */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+th {
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 16px;
+
+}
+
+td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+tbody tr:hover {
+
+    background: var(--cream-dark);
+
+}
+
+/* ===================================
+   UTILITIES
+=================================== */
+
+.text-center {
+
+    text-align: center;
+
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+.flex {
+
+    display: flex;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.hidden {
+    display: none;
+}

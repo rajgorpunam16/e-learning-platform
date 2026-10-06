@@ -1,0 +1,2742 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+  --dvoc-orange: #f58220;
+  --dvoc-orange-dark: #e96f09;
+  --dvoc-orange-soft: #fff3e7;
+
+  --dvoc-black: #171717;
+  --dvoc-navy: #111d35;
+
+  --dvoc-text: #666666;
+  --dvoc-light-text: #858585;
+
+  --dvoc-white: #ffffff;
+  --dvoc-cream: #fff5ea;
+  --dvoc-light: #f8f9fb;
+  --dvoc-border: #e4e4e4;
+
+  --dvoc-shadow: 0 14px 40px rgba(20, 25, 35, 0.08);
+  --dvoc-shadow-orange: 0 12px 25px rgba(245, 130, 32, 0.25);
+
+  --dvoc-radius-sm: 8px;
+  --dvoc-radius-md: 13px;
+  --dvoc-radius-lg: 17px;
+  --dvoc-radius-xl: 20px;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.dvoc-home {
+  width: 100%;
+  overflow: hidden;
+
+  color: var(--dvoc-black);
+  background: var(--dvoc-white);
+
+  font-family: "Poppins", sans-serif;
+}
+
+.dvoc-home *,
+.dvoc-home *::before,
+.dvoc-home *::after {
+  box-sizing: border-box;
+}
+
+.dvoc-home img {
+  max-width: 100%;
+}
+
+.dvoc-home a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dvoc-home button,
+.dvoc-home input,
+.dvoc-home select,
+.dvoc-home textarea {
+  font-family: inherit;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.dvoc-hero-section {
+  position: relative;
+
+  min-height: 680px;
+  padding: 75px 7% 90px;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(420px, 0.9fr);
+
+  align-items: center;
+  gap: 75px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 86% 15%,
+      rgba(245, 130, 32, 0.2),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fffaf5 55%,
+      #fff2e6 100%
+    );
+}
+
+.dvoc-hero-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -250px;
+  right: -130px;
+
+  border: 1px solid rgba(245, 130, 32, 0.17);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.dvoc-hero-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  left: -100px;
+  bottom: -100px;
+
+  border: 1px solid rgba(245, 130, 32, 0.1);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.dvoc-hero-content,
+.dvoc-enquiry-card {
+  position: relative;
+  z-index: 2;
+}
+
+.dvoc-hero-content {
+  max-width: 770px;
+}
+
+.dvoc-hero-label {
+  display: block;
+  margin-bottom: 18px;
+
+  color: var(--dvoc-orange);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.dvoc-hero-content h1 {
+  margin: 0 0 22px;
+
+  color: var(--dvoc-black);
+
+  font-size: clamp(47px, 5.5vw, 75px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -2.6px;
+}
+
+.dvoc-hero-content h1 span {
+  display: block;
+  color: var(--dvoc-orange);
+}
+
+.dvoc-hero-content > p {
+  max-width: 690px;
+  margin: 0;
+
+  color: var(--dvoc-text);
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.dvoc-hero-features {
+  margin-top: 26px;
+
+  display: grid;
+  gap: 10px;
+}
+
+.dvoc-hero-features div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #363636;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dvoc-hero-features svg {
+  flex-shrink: 0;
+  color: var(--dvoc-orange);
+}
+
+.dvoc-hero-buttons {
+  margin-top: 31px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.dvoc-main-button,
+.dvoc-outline-button {
+  min-height: 50px;
+  padding: 12px 23px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.dvoc-main-button {
+  color: var(--dvoc-white);
+  background: var(--dvoc-orange);
+
+  box-shadow: var(--dvoc-shadow-orange);
+}
+
+.dvoc-outline-button {
+  border: 1px solid var(--dvoc-orange);
+
+  color: var(--dvoc-orange);
+  background: var(--dvoc-white);
+}
+
+.dvoc-main-button:hover,
+.dvoc-outline-button:hover {
+  transform: translateY(-2px);
+}
+
+.dvoc-main-button:hover {
+  background: var(--dvoc-orange-dark);
+  box-shadow: 0 16px 30px rgba(245, 130, 32, 0.3);
+}
+
+/* =========================================================
+   ENQUIRY FORM
+========================================================= */
+
+.dvoc-enquiry-card {
+  width: 100%;
+  max-width: 520px;
+  justify-self: end;
+
+  padding: 35px;
+
+  border: 1px solid #f0d7c1;
+  border-radius: var(--dvoc-radius-xl);
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow: var(--dvoc-shadow);
+}
+
+.dvoc-enquiry-title {
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.dvoc-enquiry-title > div {
+  min-width: 0;
+}
+
+.dvoc-enquiry-title span {
+  display: block;
+  margin-bottom: 4px;
+
+  color: var(--dvoc-text);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dvoc-enquiry-title h2 {
+  margin: 0;
+
+  color: var(--dvoc-black);
+
+  font-size: 29px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.dvoc-enquiry-title h2::first-letter {
+  color: var(--dvoc-orange);
+}
+
+.dvoc-enquiry-title img {
+  width: 76px;
+  height: 76px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+.dvoc-enquiry-description {
+  margin: -8px 0 21px;
+
+  color: var(--dvoc-text);
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.dvoc-enquiry-card form {
+  display: grid;
+  gap: 13px;
+}
+
+.dvoc-enquiry-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.dvoc-enquiry-card input,
+.dvoc-enquiry-card select {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 13px;
+
+  outline: none;
+
+  border: 1px solid #d8d8d8;
+  border-radius: var(--dvoc-radius-sm);
+
+  color: #2d2d2d;
+  background: var(--dvoc-white);
+
+  font-size: 11px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dvoc-enquiry-card input::placeholder {
+  color: #999999;
+}
+
+.dvoc-enquiry-card input:focus,
+.dvoc-enquiry-card select:focus {
+  border-color: var(--dvoc-orange);
+
+  box-shadow:
+    0 0 0 3px rgba(245, 130, 32, 0.11);
+}
+
+.dvoc-enquiry-card button {
+  min-height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: var(--dvoc-radius-sm);
+
+  color: var(--dvoc-white);
+  background: var(--dvoc-orange);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dvoc-enquiry-card button:hover {
+  background: var(--dvoc-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--dvoc-shadow-orange);
+}
+
+.dvoc-enquiry-card button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.dvoc-form-message {
+  margin: 12px 0 0;
+
+  color: var(--dvoc-orange-dark);
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.dvoc-enquiry-card small {
+  display: block;
+  margin-top: 12px;
+
+  color: #9a9a9a;
+
+  font-size: 8px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.dvoc-statistics-section {
+  position: relative;
+  z-index: 3;
+
+  width: calc(100% - 40px);
+  max-width: 1220px;
+
+  margin: -45px auto 0;
+  padding: 22px 30px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  border-radius: 17px;
+
+  background: var(--dvoc-white);
+  box-shadow: var(--dvoc-shadow);
+}
+
+.dvoc-statistics-section article {
+  min-height: 76px;
+  padding: 10px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.dvoc-statistics-section article + article {
+  border-left: 1px solid var(--dvoc-border);
+}
+
+.dvoc-stat-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  color: var(--dvoc-orange);
+  background: var(--dvoc-orange-soft);
+
+  font-size: 18px;
+}
+
+.dvoc-statistics-section strong,
+.dvoc-statistics-section span {
+  display: block;
+}
+
+.dvoc-statistics-section strong {
+  color: var(--dvoc-black);
+
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.dvoc-statistics-section span {
+  margin-top: 3px;
+
+  color: var(--dvoc-light-text);
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.dvoc-home-section {
+  padding: 100px 3.4%;
+}
+
+.dvoc-section-heading {
+  max-width: 760px;
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.dvoc-section-heading.left {
+  margin: 0;
+  text-align: left;
+}
+
+.dvoc-section-heading > span {
+  display: block;
+  margin-bottom: 8px;
+
+  color: var(--dvoc-orange);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.dvoc-section-heading h2 {
+  margin: 0;
+
+  color: var(--dvoc-black);
+
+  font-size: clamp(33px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.dvoc-section-heading h2 strong {
+  color: var(--dvoc-orange);
+}
+
+.dvoc-section-heading > p {
+  max-width: 680px;
+  margin: 15px auto 0;
+
+  color: var(--dvoc-text);
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.dvoc-highlights {
+  background: var(--dvoc-light);
+}
+
+.dvoc-highlight-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.dvoc-highlight-grid article {
+  min-height: 270px;
+  padding: 32px;
+
+  border: 1px solid var(--dvoc-border);
+  border-radius: 16px;
+
+  background: var(--dvoc-white);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.dvoc-highlight-grid article:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(245, 130, 32, 0.25);
+
+  box-shadow: var(--dvoc-shadow);
+}
+
+.dvoc-highlight-icon {
+  width: 59px;
+  height: 59px;
+  margin-bottom: 23px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  color: var(--dvoc-orange);
+  background: var(--dvoc-orange-soft);
+
+  font-size: 23px;
+}
+
+.dvoc-highlight-grid h3 {
+  margin: 0 0 11px;
+
+  color: var(--dvoc-black);
+
+  font-size: 19px;
+}
+
+.dvoc-highlight-grid p {
+  margin: 0;
+
+  color: var(--dvoc-text);
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   E-LEARNING PLATFORM FEATURES
+========================================================= */
+
+.dvoc-platform-feature-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.dvoc-platform-feature-card {
+  min-height: 280px;
+  padding: 29px;
+
+  border: 1px solid var(--dvoc-border);
+  border-radius: 17px;
+
+  background: var(--dvoc-white);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.dvoc-platform-feature-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(245, 130, 32, 0.45);
+
+  box-shadow: var(--dvoc-shadow);
+}
+
+.dvoc-platform-feature-card h3 {
+  margin: 0 0 12px;
+
+  color: var(--dvoc-black);
+
+  font-size: 17px;
+}
+
+.dvoc-platform-feature-card p {
+  margin: 0;
+
+  color: var(--dvoc-text);
+
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   COURSES
+========================================================= */
+
+.dvoc-courses-section {
+  background: var(--dvoc-white);
+}
+
+.dvoc-courses-header {
+  margin-bottom: 40px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.dvoc-course-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dvoc-course-filters {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dvoc-course-filters button {
+  min-height: 39px;
+  padding: 9px 17px;
+
+  border: 1px solid var(--dvoc-border);
+  border-radius: 50px;
+
+  color: #727272;
+  background: var(--dvoc-white);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dvoc-course-filters button:hover {
+  border-color: var(--dvoc-orange);
+  color: var(--dvoc-orange);
+}
+
+.dvoc-course-filters button.active {
+  border-color: #1e1e1e;
+
+  color: var(--dvoc-white);
+  background: var(--dvoc-orange);
+
+  box-shadow: 0 0 0 2px #1e1e1e;
+}
+
+.dvoc-slider-buttons {
+  display: flex;
+  gap: 7px;
+}
+
+.dvoc-slider-buttons button {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--dvoc-border);
+  border-radius: 50%;
+
+  color: var(--dvoc-black);
+  background: var(--dvoc-white);
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dvoc-slider-buttons button:hover {
+  border-color: var(--dvoc-orange);
+
+  color: var(--dvoc-white);
+  background: var(--dvoc-orange);
+}
+
+.dvoc-course-slider {
+  width: 100%;
+
+  padding: 3px 0 18px;
+
+  display: flex;
+  gap: 19px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--dvoc-orange) #e3e3e3;
+}
+
+.dvoc-course-slider::-webkit-scrollbar {
+  height: 10px;
+}
+
+.dvoc-course-slider::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background: #e3e3e3;
+}
+
+.dvoc-course-slider::-webkit-scrollbar-thumb {
+  min-width: 120px;
+
+  border: 2px solid #e3e3e3;
+  border-radius: 50px;
+
+  background: var(--dvoc-orange);
+}
+
+.dvoc-course-slider::-webkit-scrollbar-thumb:hover {
+  background: #e66d00;
+}
+
+/* =========================================================
+   COURSE CARD
+========================================================= */
+
+.dvoc-course-card {
+  flex: 0 0 calc((100% - 57px) / 4);
+
+  min-width: 285px;
+
+  scroll-snap-align: start;
+
+  overflow: hidden;
+
+  border: 1px solid var(--dvoc-border);
+  border-radius: 13px;
+
+  background: var(--dvoc-white);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.dvoc-course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--dvoc-shadow);
+}
+
+.dvoc-course-image {
+  position: relative;
+
+  width: 100%;
+  height: 180px;
+
+  overflow: hidden;
+
+  background: #e9e9e9;
+}
+
+.dvoc-course-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.dvoc-course-card:hover .dvoc-course-image img {
+  transform: scale(1.04);
+}
+
+.dvoc-course-level {
+  position: absolute;
+
+  left: 13px;
+  bottom: 13px;
+
+  padding: 6px 10px;
+
+  border-radius: 50px;
+
+  color: #ffffff;
+  background: rgba(17, 29, 53, 0.88);
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.dvoc-course-wishlist {
+  position: absolute;
+
+  top: 13px;
+  right: 13px;
+
+  width: 37px;
+  height: 37px;
+
+  display: grid;
+  place-items: center;
+
+  border: none;
+  border-radius: 50%;
+
+  color: #626262;
+  background: rgba(255, 255, 255, 0.94);
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 18px rgba(17, 29, 53, 0.13);
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dvoc-course-wishlist:hover,
+.dvoc-course-wishlist.active {
+  transform: scale(1.06);
+
+  color: #ffffff;
+  background: var(--dvoc-orange);
+}
+
+.dvoc-course-information {
+  min-height: 300px;
+
+  padding: 20px 21px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dvoc-course-information h3 {
+  margin: 0 0 10px;
+
+  color: #222222;
+
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.dvoc-course-information > p {
+  margin: 0 0 15px;
+
+  color: var(--dvoc-text);
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.dvoc-course-rating {
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: var(--dvoc-text);
+
+  font-size: 9px;
+}
+
+.dvoc-course-rating svg {
+  color: #f5a623;
+}
+
+.dvoc-course-rating strong {
+  color: var(--dvoc-black);
+}
+
+.dvoc-course-instructor {
+  display: block;
+
+  margin: -5px 0 15px;
+
+  color: #8a8a8a;
+
+  font-size: 9px;
+}
+
+.dvoc-course-meta {
+  margin-top: 0;
+  padding: 13px 0;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  border-top: 1px solid var(--dvoc-border);
+  border-bottom: 1px solid var(--dvoc-border);
+}
+
+.dvoc-course-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--dvoc-text);
+
+  font-size: 9px;
+}
+
+.dvoc-course-meta svg {
+  flex-shrink: 0;
+  color: var(--dvoc-orange);
+}
+
+/* =========================================================
+   COURSE PRICE
+========================================================= */
+
+.dvoc-course-price-row {
+  padding: 15px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dvoc-course-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.dvoc-course-price strong {
+  color: var(--dvoc-black);
+
+  font-size: 18px;
+}
+
+.dvoc-course-price > span {
+  color: #9a9a9a;
+
+  font-size: 10px;
+
+  text-decoration: line-through;
+}
+
+.dvoc-course-discount {
+  padding: 5px 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50px;
+
+  color: #16794c;
+  background: #eaf8f0;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   COURSE ACTIONS
+========================================================= */
+
+.dvoc-course-actions {
+  margin-top: auto;
+
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 9px;
+}
+
+.dvoc-course-details-button,
+.dvoc-course-cart-button {
+  min-height: 42px;
+
+  padding: 9px 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.dvoc-course-details-button:hover,
+.dvoc-course-cart-button:hover {
+  transform: translateY(-1px);
+}
+
+.dvoc-course-details-button {
+  border: 1px solid var(--dvoc-orange);
+
+  color: var(--dvoc-orange);
+  background: #ffffff;
+}
+
+.dvoc-course-details-button:hover {
+  color: #ffffff;
+  background: var(--dvoc-orange);
+}
+
+.dvoc-course-cart-button {
+  border: 1px solid var(--dvoc-orange);
+
+  color: #ffffff;
+  background: var(--dvoc-orange);
+}
+
+.dvoc-course-cart-button:hover {
+  background: var(--dvoc-orange-dark);
+}
+
+.dvoc-course-cart-button.added {
+  border-color: #17233d;
+  background: #17233d;
+}
+
+.dvoc-course-cart-button.purchased {
+  border-color: #16875f;
+  background: #16875f;
+}
+
+.dvoc-course-scroll-line {
+  display: none;
+}
+
+.dvoc-course-scroll-line span {
+  width: 19%;
+  height: 7px;
+
+  margin-left: 14px;
+
+  border-radius: 30px;
+
+  background: var(--dvoc-orange);
+}
+
+.dvoc-view-all-wrapper {
+  margin-top: 31px;
+
+  text-align: center;
+}
+
+.dvoc-view-all-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--dvoc-orange);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dvoc-view-all-wrapper a:hover {
+  color: var(--dvoc-orange-dark);
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   LEARNING PROCESS
+========================================================= */
+
+.dvoc-learning-process-section {
+  background: #ffffff;
+}
+
+.dvoc-learning-process-grid {
+  max-width: 1220px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dvoc-learning-step {
+  position: relative;
+
+  min-height: 240px;
+  padding: 28px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--dvoc-border);
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.dvoc-learning-step:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(245, 130, 32, 0.3);
+
+  box-shadow: var(--dvoc-shadow);
+}
+
+.dvoc-learning-step > span {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: var(--dvoc-orange);
+
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.dvoc-learning-step h3 {
+  margin: 0 0 11px;
+
+  color: var(--dvoc-black);
+
+  font-size: 17px;
+}
+
+.dvoc-learning-step p {
+  margin: 0;
+
+  color: var(--dvoc-text);
+
+  font-size: 11px;
+  line-height: 1.8;
+}
+/* =========================================
+   TESTIMONIALS
+========================================= */
+
+.dvoc-testimonial-section {
+  padding: 90px 3.4%;
+  background: var(--dvoc-cream);
+}
+
+.dvoc-testimonial-grid {
+  max-width: 1260px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Student testimonial card */
+
+.dvoc-testimonial-card {
+  min-height: 0;
+  padding: 38px 32px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid rgba(228, 228, 228, 0.8);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.dvoc-testimonial-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(245, 130, 32, 0.3);
+
+  box-shadow: var(--dvoc-shadow);
+}
+
+
+/* =========================================
+   STUDENT PHOTO
+========================================= */
+
+.dvoc-student-image {
+  width: 105px;
+  height: 105px;
+
+  margin-bottom: 22px;
+  padding: 4px;
+
+  overflow: hidden;
+
+  border: 4px solid var(--dvoc-orange);
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  flex-shrink: 0;
+
+  box-shadow:
+    0 10px 25px rgba(245, 130, 32, 0.18);
+}
+
+.dvoc-student-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   QUOTE ICON
+========================================= */
+
+.dvoc-quote-icon {
+  margin-bottom: 12px;
+
+  color: var(--dvoc-orange);
+
+  font-size: 22px;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   TESTIMONIAL TEXT
+========================================= */
+
+.dvoc-testimonial-card > p {
+  margin: 0;
+
+  color: #555555;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.dvoc-testimonial-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 25px 0 18px;
+
+  background: #dedede;
+}
+
+
+/* =========================================
+   STUDENT NAME
+========================================= */
+
+.dvoc-testimonial-card h3 {
+  margin: 0 0 6px;
+
+  color: #222222;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   STUDENT COURSE / ROLE
+========================================= */
+
+.dvoc-testimonial-card > span {
+  color: var(--dvoc-orange);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   TESTIMONIAL CARD
+========================================= */
+
+.dvoc-testimonial-card {
+  min-height: 0;
+  padding: 38px 32px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Transparent border always exists */
+  border: 2px solid transparent;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   HOVER - ORANGE BORDER ON ALL SIDES
+========================================= */
+
+.dvoc-testimonial-card:hover {
+  transform: translateY(-7px);
+
+  /* Orange border on ALL 4 SIDES */
+  border: 2px solid var(--dvoc-orange);
+
+  box-shadow:
+    0 0 0 3px rgba(245, 130, 32, 0.12),
+    0 18px 40px rgba(245, 130, 32, 0.20);
+}
+
+
+/* =========================================
+   STUDENT IMAGE
+========================================= */
+
+.dvoc-student-image {
+  width: 105px;
+  height: 105px;
+
+  margin-bottom: 22px;
+  padding: 4px;
+
+  overflow: hidden;
+
+  border: 4px solid var(--dvoc-orange);
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  flex-shrink: 0;
+
+  box-shadow:
+    0 10px 25px rgba(245, 130, 32, 0.18);
+}
+
+.dvoc-student-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.dvoc-quote-icon {
+  margin-bottom: 12px;
+
+  color: var(--dvoc-orange);
+
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   TESTIMONIAL TEXT
+========================================= */
+
+.dvoc-testimonial-card > p {
+  margin: 0;
+
+  color: #555555;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.dvoc-testimonial-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 25px 0 18px;
+
+  background: #dedede;
+}
+
+
+/* =========================================
+   STUDENT NAME
+========================================= */
+
+.dvoc-testimonial-card h3 {
+  margin: 0 0 6px;
+
+  color: #222222;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   STUDENT ROLE / COURSE
+========================================= */
+
+.dvoc-testimonial-card > span {
+  color: var(--dvoc-orange);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1150px) {
+  .dvoc-testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .dvoc-testimonial-card {
+    padding: 35px 30px 28px;
+  }
+
+  .dvoc-student-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dvoc-testimonial-card > p {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .dvoc-testimonial-section {
+    padding: 70px 5%;
+  }
+
+  .dvoc-testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dvoc-testimonial-card {
+    min-height: 0;
+    padding: 32px 24px 27px;
+    border-radius: 17px;
+  }
+
+  .dvoc-testimonial-card:hover {
+    transform: translateY(-5px);
+
+    border: 2px solid var(--dvoc-orange);
+
+    box-shadow:
+      0 0 0 3px rgba(245, 130, 32, 0.12),
+      0 15px 32px rgba(245, 130, 32, 0.20);
+  }
+
+  .dvoc-student-image {
+    width: 105px;
+    height: 105px;
+
+    margin-bottom: 20px;
+  }
+
+  .dvoc-quote-icon {
+    font-size: 21px;
+  }
+
+  .dvoc-testimonial-card > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .dvoc-testimonial-divider {
+    margin: 22px 0 16px;
+  }
+
+  .dvoc-testimonial-card h3 {
+    font-size: 16px;
+  }
+
+  .dvoc-testimonial-card > span {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 390px) {
+  .dvoc-testimonial-card {
+    padding: 28px 20px 25px;
+  }
+
+  .dvoc-student-image {
+    width: 95px;
+    height: 95px;
+  }
+
+  .dvoc-testimonial-card > p {
+    font-size: 12.5px;
+  }
+}
+
+/* =========================================================
+   BRANCHES
+========================================================= */
+
+.dvoc-branches-section {
+  background: var(--dvoc-white);
+}
+
+.dvoc-branch-grid {
+  max-width: 1260px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.dvoc-branch-card {
+  position: relative;
+
+  min-height: 220px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  color: var(--dvoc-white);
+
+  background-position: center;
+  background-size: cover;
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.dvoc-branch-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(17, 29, 53, 0.5);
+
+  pointer-events: none;
+}
+
+.dvoc-branch-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dvoc-branch-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--dvoc-shadow);
+}
+
+.dvoc-branch-card > svg {
+  margin-bottom: 7px;
+
+  color: var(--dvoc-orange);
+
+  font-size: 19px;
+}
+
+.dvoc-branch-card h3 {
+  margin: 0 0 12px;
+
+  color: var(--dvoc-white);
+
+  font-size: 20px;
+}
+
+.dvoc-branch-card p {
+  margin: 0 0 6px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.dvoc-branch-card > span {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 9px;
+}
+
+.dvoc-branch-card > a {
+  margin-top: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--dvoc-orange);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   DASHBOARD PROMOTION
+========================================================= */
+
+.dvoc-dashboard-promotion {
+  padding: 105px 7%;
+
+  display: grid;
+  grid-template-columns:
+    minmax(420px, 0.9fr)
+    minmax(0, 1.1fr);
+
+  align-items: center;
+  gap: 90px;
+
+  background: var(--dvoc-light);
+}
+
+.dvoc-dashboard-visual {
+  position: relative;
+
+  min-height: 440px;
+
+  display: grid;
+  place-items: center;
+}
+
+.dvoc-dashboard-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  border: 1px dashed rgba(245, 130, 32, 0.4);
+  border-radius: 50%;
+}
+
+.dvoc-dashboard-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 180px;
+  height: 180px;
+
+  display: grid;
+  place-items: center;
+
+  border: 14px solid #ffffff;
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--dvoc-orange),
+      var(--dvoc-orange-dark)
+    );
+
+  box-shadow: 0 24px 52px rgba(245, 130, 32, 0.28);
+
+  font-size: 64px;
+}
+
+.dvoc-dashboard-floating-item {
+  position: absolute;
+  z-index: 3;
+
+  min-width: 165px;
+
+  padding: 13px 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: 1px solid var(--dvoc-border);
+  border-radius: 13px;
+
+  color: var(--dvoc-black);
+  background: #ffffff;
+
+  box-shadow: 0 13px 32px rgba(17, 29, 53, 0.1);
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.dvoc-dashboard-floating-item svg {
+  flex-shrink: 0;
+  color: var(--dvoc-orange);
+}
+
+.dvoc-dashboard-floating-item.item-one {
+  top: 32px;
+  left: 4%;
+}
+
+.dvoc-dashboard-floating-item.item-two {
+  top: 120px;
+  right: 0;
+}
+
+.dvoc-dashboard-floating-item.item-three {
+  left: 6%;
+  bottom: 42px;
+}
+
+.dvoc-dashboard-content {
+  max-width: 650px;
+}
+
+.dvoc-dashboard-content > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--dvoc-orange);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.dvoc-dashboard-content h2 {
+  margin: 0 0 17px;
+
+  color: var(--dvoc-black);
+
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.25;
+}
+
+.dvoc-dashboard-content > p {
+  margin: 0;
+
+  color: var(--dvoc-text);
+
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.dvoc-dashboard-benefits {
+  margin-top: 27px;
+
+  display: grid;
+  gap: 13px;
+}
+
+.dvoc-dashboard-benefits div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--dvoc-black);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dvoc-dashboard-benefits svg {
+  flex-shrink: 0;
+  color: var(--dvoc-orange);
+}
+
+.dvoc-dashboard-button {
+  width: fit-content;
+
+  min-height: 48px;
+
+  margin-top: 29px;
+  padding: 11px 21px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+  background: var(--dvoc-orange);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dvoc-dashboard-button:hover {
+  background: var(--dvoc-orange-dark);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   GOVERNMENT & INDUSTRY PARTNERS
+========================================================= */
+
+.dvoc-partners-section {
+  width: 100%;
+
+  padding: 34px 0 30px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+
+  overflow: hidden;
+}
+
+.dvoc-partners-heading {
+  padding: 0 20px;
+
+  margin-bottom: 22px;
+
+  text-align: center;
+}
+
+.dvoc-partners-heading span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #777777;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.dvoc-partners-heading h2 {
+  margin: 0;
+
+  color: #222222;
+
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   PARTNER SLIDER
+========================================================= */
+
+.dvoc-partners-slider {
+  padding: 0 20px;
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.dvoc-partners-track {
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 46px;
+
+  animation: dvocPartnersScroll 28s linear infinite;
+
+  will-change: transform;
+}
+
+.dvoc-partners-slider:hover .dvoc-partners-track {
+  animation-play-state: paused;
+  padding-top: 0 20px;
+}
+
+/* =========================================================
+   PARTNER CARD
+========================================================= */
+
+.dvoc-partner-card {
+  width: 210px;
+  height: 116px;
+padding: 15px;
+  flex: 0 0 210px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.dvoc-partner-card:hover {
+  border-color: var(--dvoc-orange);
+padding: 15px;
+  box-shadow:
+    0 8px 24px rgba(245, 130, 32, 0.15);
+
+  transform: translateY(-3px);
+}
+
+.dvoc-partner-card img {
+  width: 78%;
+  height: 78%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   PARTNER ANIMATION
+========================================================= */
+
+@keyframes dvocPartnersScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 23px));
+  }
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.dvoc-home-cta {
+  max-width: 1260px;
+
+  margin: 25px auto 90px;
+
+  padding: 54px 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  border-radius: 23px;
+
+  color: var(--dvoc-white);
+
+  background:
+    radial-gradient(
+      circle at 90% 18%,
+      rgba(245, 130, 32, 0.39),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #101c34,
+      #263858
+    );
+
+  box-shadow: var(--dvoc-shadow);
+}
+
+.dvoc-home-cta > div:first-child {
+  max-width: 720px;
+}
+
+.dvoc-home-cta > div:first-child > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #ffb56e;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.dvoc-home-cta h2 {
+  margin: 0 0 14px;
+
+  color: var(--dvoc-white);
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.18;
+}
+
+.dvoc-home-cta h2 strong {
+  color: var(--dvoc-orange);
+}
+
+.dvoc-home-cta p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.69);
+
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.dvoc-home-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.dvoc-home-cta-actions > a {
+  min-width: 220px;
+  min-height: 49px;
+
+  padding: 11px 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.dvoc-home-cta-actions > a:hover {
+  transform: translateY(-2px);
+}
+
+.dvoc-home-cta-actions > a:first-child {
+  color: var(--dvoc-navy);
+  background: var(--dvoc-white);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.dvoc-home-cta-actions > a:last-child {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  color: var(--dvoc-white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dvoc-home-cta-actions > a:last-child svg {
+  color: #ffb56e;
+}
+
+.dvoc-home-cta-actions span,
+.dvoc-home-cta-actions strong {
+  display: block;
+}
+
+.dvoc-home-cta-actions span {
+  font-size: 8px;
+  opacity: 0.7;
+}
+
+.dvoc-home-cta-actions strong {
+  margin-top: 2px;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   RESPONSIVE - LARGE TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+  .dvoc-hero-section {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .dvoc-hero-content {
+    max-width: 900px;
+  }
+
+  .dvoc-enquiry-card {
+    max-width: 700px;
+    justify-self: start;
+  }
+
+  .dvoc-statistics-section {
+    width: 90%;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dvoc-statistics-section article:nth-child(3) {
+    border-left: none;
+  }
+
+  .dvoc-statistics-section article:nth-child(3),
+  .dvoc-statistics-section article:nth-child(4) {
+    border-top: 1px solid var(--dvoc-border);
+  }
+
+  .dvoc-course-card {
+    flex-basis: calc((100% - 38px) / 3);
+  }
+
+  .dvoc-testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dvoc-dashboard-promotion {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .dvoc-dashboard-visual {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 1100
+========================================================= */
+
+@media (max-width: 1100px) {
+  .dvoc-platform-feature-grid,
+  .dvoc-learning-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dvoc-dashboard-promotion {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .dvoc-partners-section {
+    padding: 30px 0 26px;
+  }
+
+  .dvoc-partners-heading h2 {
+    font-size: 21px;
+  }
+
+  .dvoc-partners-track {
+    gap: 30px;
+    animation-duration: 24s;
+  }
+
+  .dvoc-partner-card {
+    width: 190px;
+    height: 108px;
+
+    flex-basis: 190px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 850
+========================================================= */
+
+@media (max-width: 850px) {
+  .dvoc-highlight-grid,
+  .dvoc-branch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dvoc-courses-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dvoc-course-controls {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .dvoc-course-card {
+    flex-basis: calc((100% - 19px) / 2);
+  }
+
+  .dvoc-home-cta {
+    width: 90%;
+
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dvoc-home-cta-actions {
+    width: 100%;
+
+    flex-direction: row;
+  }
+
+  .dvoc-home-cta-actions > a {
+    flex: 1;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .dvoc-hero-section {
+    min-height: auto;
+
+    padding: 60px 5% 75px;
+
+    gap: 35px;
+  }
+
+  .dvoc-hero-content h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .dvoc-hero-content > p {
+    font-size: 13px;
+  }
+
+  .dvoc-hero-buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dvoc-main-button,
+  .dvoc-outline-button {
+    width: 100%;
+  }
+
+  .dvoc-enquiry-card {
+    padding: 25px 20px;
+  }
+
+  .dvoc-enquiry-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dvoc-enquiry-title h2 {
+    font-size: 24px;
+  }
+
+  .dvoc-enquiry-title img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .dvoc-statistics-section {
+    width: 90%;
+
+    grid-template-columns: 1fr;
+
+    margin-top: 28px;
+
+    padding: 15px 18px;
+  }
+
+  .dvoc-statistics-section article {
+    min-height: 70px;
+    padding: 10px 8px;
+  }
+
+  .dvoc-statistics-section article + article {
+    border-top: 1px solid var(--dvoc-border);
+    border-left: none;
+  }
+
+  .dvoc-home-section,
+  .dvoc-testimonial-section {
+    padding: 70px 5%;
+  }
+
+  .dvoc-section-heading {
+    margin-bottom: 35px;
+  }
+
+  .dvoc-section-heading h2 {
+    font-size: 32px;
+  }
+
+  .dvoc-section-heading > p {
+    font-size: 12px;
+  }
+
+  .dvoc-platform-feature-grid,
+  .dvoc-learning-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dvoc-course-controls {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dvoc-course-filters {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 3px 3px 8px;
+
+    scrollbar-width: none;
+  }
+
+  .dvoc-course-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dvoc-course-filters button {
+    flex: 0 0 auto;
+  }
+
+  .dvoc-slider-buttons {
+    align-self: flex-end;
+  }
+
+  .dvoc-course-card {
+    flex-basis: 84%;
+    min-width: 0;
+  }
+
+  .dvoc-course-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .dvoc-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dvoc-testimonial-card {
+    min-height: 420px;
+  }
+
+  .dvoc-dashboard-promotion {
+    padding: 75px 5%;
+
+    gap: 25px;
+  }
+
+  .dvoc-dashboard-visual {
+    min-height: 390px;
+  }
+
+  .dvoc-dashboard-visual::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  .dvoc-dashboard-icon {
+    width: 140px;
+    height: 140px;
+
+    font-size: 48px;
+  }
+
+  .dvoc-dashboard-floating-item {
+    min-width: 140px;
+
+    padding: 11px;
+
+    font-size: 8px;
+  }
+
+  .dvoc-dashboard-floating-item.item-one {
+    left: 0;
+  }
+
+  .dvoc-dashboard-floating-item.item-two {
+    right: 0;
+  }
+
+  .dvoc-dashboard-floating-item.item-three {
+    left: 0;
+  }
+
+  .dvoc-home-cta {
+    width: 90%;
+
+    margin-bottom: 60px;
+
+    padding: 36px 23px;
+  }
+
+  .dvoc-home-cta-actions {
+    flex-direction: column;
+  }
+
+  .dvoc-home-cta-actions > a {
+    width: 100%;
+  }
+
+  .dvoc-partners-section {
+    padding: 27px 0 24px;
+  }
+
+  .dvoc-partners-heading {
+    margin-bottom: 18px;
+  }
+
+  .dvoc-partners-heading span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .dvoc-partners-heading h2 {
+    font-size: 19px;
+  }
+
+  .dvoc-partners-track {
+    gap: 18px;
+
+    animation-duration: 20s;
+  }
+
+  .dvoc-partner-card {
+    width: 165px;
+    height: 94px;
+
+    flex-basis: 165px;
+
+    border-radius: 8px;
+  }
+
+  .dvoc-partner-card img {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .dvoc-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .dvoc-enquiry-title {
+    align-items: flex-start;
+  }
+
+  .dvoc-enquiry-title img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .dvoc-dashboard-floating-item {
+    min-width: 125px;
+
+    font-size: 7.5px;
+  }
+
+  .dvoc-course-card {
+    flex-basis: 90%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .dvoc-hero-section {
+    padding-top: 50px;
+  }
+
+  .dvoc-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .dvoc-hero-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .dvoc-enquiry-card {
+    padding: 22px 17px;
+  }
+
+  .dvoc-enquiry-title h2 {
+    font-size: 22px;
+  }
+
+  .dvoc-course-card {
+    flex-basis: 92%;
+  }
+
+  .dvoc-dashboard-visual {
+    min-height: 350px;
+  }
+
+  .dvoc-dashboard-visual::before {
+    width: 220px;
+    height: 220px;
+  }
+
+  .dvoc-dashboard-icon {
+    width: 120px;
+    height: 120px;
+
+    border-width: 10px;
+
+    font-size: 40px;
+  }
+
+  .dvoc-dashboard-floating-item {
+    min-width: 110px;
+
+    padding: 9px;
+
+    gap: 6px;
+
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .dvoc-home *,
+  .dvoc-home *::before,
+  .dvoc-home *::after {
+    scroll-behavior: auto !important;
+
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+
+  .dvoc-partners-track {
+    animation: none;
+  }
+}
