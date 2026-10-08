@@ -1,63 +1,132 @@
-🎓 E-Learning Platform
+# 🎓 E-Learning Platform
 
-A full-stack e-learning platform built with React.js, Node.js, Express.js, and MongoDB. The platform allows users to browse courses, explore chapters, purchase courses, and manage their learning, while administrators can manage users, courses, categories, authors, and chapters.
+A full-stack e-learning platform built using **React.js, Node.js, Express.js, and MongoDB**.
 
-🌐 Live Demo
+The platform allows users to browse courses, explore chapters, purchase courses, manage their learning content, and maintain their profiles. Administrators can manage users, courses, categories, authors, and chapters through the admin dashboard.
 
-https://e-learning-platform-1-gck5.onrender.com/
+---
 
-✨ Features
-👤 User Features
-User registration and login
-Browse available courses
-Search and filter courses
-View course details
-Explore course chapters
-Purchase courses
-Access purchased learning content
-User profile management
+## 🌐 Live Demo
 
-👨‍💼 Admin Features
-Admin authentication
-Dashboard
-User management
-Course management
-Category management
-Author management
-Chapter management
-Course content management
+🚀 **[Visit E-Learning Platform](https://e-learning-platform-1-gck5.onrender.com/)**
 
-🔐 Security
-Environment-based configuration
-Protected API routes
-Role-based access control
-Secure database connection
-CORS configuration
+> **Note:** The application is hosted on Render's free tier, so the first request may take some time if the service has been inactive.
 
-🛠️ Tech Stack
+---
 
-Frontend
-React.js
-JavaScript
-HTML5
-CSS3
-Bootstrap
+## ✨ Features
 
-Backend
-Node.js
-Express.js
-REST API
+### 👤 User Features
 
-Database
-MongoDB
-Mongoose
+- User registration and login
+- Browse available courses
+- Search and filter courses
+- View course details
+- Explore course chapters
+- Purchase courses
+- Access purchased learning content
+- User profile management
+- Wishlist management
+- Shopping cart
+- Payment history
 
-Deployment
-Frontend: Render
-Backend: Render
-Database: MongoDB Atlas
 
-📂 Project Structure
+### 🔐 Security
+
+- Environment-based configuration
+- Protected API routes
+- Role-based access control
+- Secure database connection
+- CORS configuration
+- JWT-based authentication
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Bootstrap
+- React Router
+
+### Backend
+
+- Node.js
+- Express.js
+- REST API
+- JWT Authentication
+
+### Database
+
+- MongoDB
+- Mongoose
+- MongoDB Atlas
+
+### Deployment
+
+- Frontend: Render
+- Backend: Render
+- Database: MongoDB Atlas
+
+---
+
+## 📸 Screenshots
+
+### 🏠 User Interface
+
+<table>
+  <tr>
+    <td><img src="react_project/home.png" width="450"></td>
+    <td><img src="react_project/course.png" width="450"></td>
+  </tr>
+  <tr>
+    <td><img src="react_project/course1.png" width="450"></td>
+    <td><img src="react_project/my_course.png" width="450"></td>
+  </tr>
+</table>
+
+### 👤 User Account
+
+<table>
+  <tr>
+    <td><img src="react_project/Profile.png" width="450"></td>
+    <td><img src="react_project/wishlist.png" width="450"></td>
+  </tr>
+  <tr>
+    <td><img src="react_project/cart.png" width="450"></td>
+    <td><img src="react_project/pay_history.png" width="450"></td>
+  </tr>
+</table>
+
+### 👨‍💼 User Dashboard
+
+<table>
+  <tr>
+    <td><img src="react_project/dashboard.png" width="450"></td>
+  </tr>
+</table>
+
+### 📄 Other Pages
+
+<table>
+  <tr>
+    <td><img src="react_project/About.png" width="450"></td>
+    <td><img src="react_project/contact.png" width="450"></td>
+  </tr>
+  <tr>
+    <td><img src="react_project/footer.png" width="450"></td>
+  </tr>
+</table>
+
+---
+
+## 📂 Project Structure
+
+```text
 e-learning-platform/
 │
 ├── backend/
@@ -65,115 +134,36 @@ e-learning-platform/
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
-│   ├── middleware/
+│   ├── utils/
 │   ├── server.js
 │   └── package.json
 │
 ├── public/
 │
 ├── src/
+│   ├── admin/
 │   ├── components/
 │   ├── pages/
-│   ├── services/
 │   ├── assets/
+│   ├── config.js
 │   ├── App.js
 │   └── index.js
 │
+├── react_project/
+│   ├── home.png
+│   ├── course.png
+│   ├── course1.png
+│   ├── my_course.png
+│   ├── Profile.png
+│   ├── wishlist.png
+│   ├── cart.png
+│   ├── pay_history.png
+│   ├── dashboard.png
+│   ├── About.png
+│   ├── contact.png
+│   └── footer.png
+│
 ├── .gitignore
 ├── package.json
+├── package-lock.json
 └── README.md
-
-🚀 Getting Started
-1. Clone the repository
-git clone https://github.com/rajgorpunam16/e-learning-platform.git
-cd e-learning-platform
-2. Install frontend dependencies
-npm install
-3. Install backend dependencies
-cd backend
-npm install
-4. Configure environment variables
-Create:
-backend/.env
-
-Example:
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-FRONTEND_URL=http://localhost:3000
-JWT_SECRET=your_secret_key
-
-Do not commit .env files to GitHub.
-
-5. Start the backend
-cd backend
-npm start
-6. Start the frontend
-
-Open another terminal:
-
-npm start
-
-The application will be available at:
-
-http://localhost:3000
-🔌 API
-
-Example endpoints:
-
-GET    /api/courses
-GET    /api/courses/:id
-
-POST   /api/users/register
-POST   /api/users/login
-
-GET    /api/categories
-GET    /api/authors
-
-GET    /api/chapters
-
-Admin endpoints are protected using authentication and authorization.
-
-🗄️ Database
-
-The application uses MongoDB to store:
-
-Users
-Courses
-Authors
-Categories
-Chapters
-Books/content
-
-MongoDB Atlas can be used for cloud deployment.
-
-🚀 Deployment
-
-The project can be deployed using:
-
-React frontend → Render
-Node.js/Express backend → Render
-MongoDB → MongoDB Atlas
-
-Environment variables must be configured separately on the deployment platform.
-
-🔮 Future Enhancements
-Online payment integration
-Course progress tracking
-Video-based learning
-Course ratings and reviews
-Certificates
-Wishlist
-Notifications
-Advanced admin analytics
-Instructor dashboard
-Course completion tracking
-
-👩‍💻 Author
-
-Punam Rajgor
-
-GitHub: https://github.com/rajgorpunam16
-
-📄 License
-
-This project is created for educational and portfolio purposes.
